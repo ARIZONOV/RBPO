@@ -40,8 +40,8 @@
         <scope>test</scope>
     </dependency>
 </dependencies>
-
-
-
-## Скриншоты работы
 ```
+
+## Скриншоты работ
+
+---
