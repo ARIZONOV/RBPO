@@ -45,3 +45,20 @@
 ## Скриншоты работ
 
 ---
+
+![alt text](image.png)
+_Рис. 1. Структура зависимостей проекта_
+
+![alt text](image-1.png)
+_Рис. 2. POST-запрос для сущности Author_
+
+![alt text](image-2.png)
+_Рис. 3. POST-запрос для сущности Book_
+
+![alt text](image-3.png)
+_Рис. 4. POST-запрос для сущности Readers_
+
+![alt text](image-4.png)
+_Рис. 5. POST-запрос для сущности Fines_
+
+---
