@@ -20,22 +20,8 @@
 
 ## Структура проекта
 
----
-
-src/main/java/com/antondemin/library_api/
-├── LibraryApiApplication.java
-├── model/
-│ ├── Author.java
-│ ├── Book.java
-│ ├── Reader.java
-│ └── Fine.java
-└── controller/
-├── AuthorController.java
-├── BookController.java
-├── ReaderController.java
-└── FineController.java
-
----
+![alt text](image.png)
+_Структура проекта_
 
 ## 📦 Зависимости
 
