@@ -1,18 +1,27 @@
 package com.antondemin.library_api.model;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
 import java.util.List;
 
+@Entity
+@Table(name = "books")
 public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
+    @Column(nullable = false)
     private String title;
 
+    @ElementCollection
+    @CollectionTable(name = "book_authors", joinColumns = @JoinColumn(name = "book_id"))
+    @Column(name = "author_id")
     @Size(min = 1, message = "Книга должна иметь хотя бы одного автора")
-    private List<Long> authorIds; // связь с Author (многие-ко-многим через список id)
+    private List<Long> authorIds;
 
     private String isbn;
     private String description;

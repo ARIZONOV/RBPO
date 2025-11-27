@@ -1,21 +1,29 @@
 package com.antondemin.library_api.model;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 
+@Entity
+@Table(name = "fines")
 public class Fine {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
+    @Column(nullable = false)
     private Long readerId; // связь с Reader
 
     @NotNull
+    @Column(nullable = false)
     private Long bookId; // связь с Book
 
     @Min(0)
     private double amount;
 
-    private String reason; // просрочка, утрата, порча и т.п.
+    private String reason;
 
     public Fine() {
     }

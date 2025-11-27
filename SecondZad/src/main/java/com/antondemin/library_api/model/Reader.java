@@ -1,11 +1,18 @@
 package com.antondemin.library_api.model;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 
+@Entity
+@Table(name = "readers")
 public class Reader {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
+    @Column(nullable = false)
     private String name;
 
     private String email;
